@@ -1,16 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using System.Collections.Generic;
+using UnityEngine.Pool;
+using System.Collections;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour 
 {
     private Player playerInput;
-
     private CharacterController playerController;
+    public Transform bulletPoint;
+
+    
+
+    public BulletBehavior bulletBehavior;
+
 
     private void Awake()
     {
+       
         playerInput = new Player();
         playerController = GetComponent<CharacterController>();
     }
@@ -28,21 +34,36 @@ public class PlayerController : MonoBehaviour
 
     public float MoveSpeed = 0f;
 
-    private void Update()
+
+    private void Start()
     {
-        Vector2 moveInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
-        Vector2 move = new(moveInput.x, moveInput.y);
-        playerController.Move(move * Time.deltaTime * MoveSpeed);    
-        
+        InvokeRepeating("Fire", 0.1f, bulletBehavior.spawnTimer);
     }
 
 
+    private void Update()
+    {
+        
+        
+        Vector2 moveInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
+        Vector2 move = new(moveInput.x, moveInput.y);
+        playerController.Move(MoveSpeed * Time.deltaTime * move);
 
+        
+    }
 
+    private void Fire()
+    {
+        GameObject bullet = BulletPool.instance.GetPooledObject();
 
+        if (bullet != null)
+        {
+            bullet.transform.position = bulletPoint.position;
+            bullet.SetActive(true);
+        }
+    }
 
-
-
+    
 
 
 }
