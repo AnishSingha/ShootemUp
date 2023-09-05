@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public Transform bulletPoint;
 
     
-
     public BulletBehavior bulletBehavior;
 
 
@@ -62,8 +61,4 @@ public class PlayerController : MonoBehaviour
             bullet.SetActive(true);
         }
     }
-
-    
-
-
 }
