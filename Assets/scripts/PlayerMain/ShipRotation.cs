@@ -5,15 +5,18 @@ using UnityEngine;
 public class ShipRotation : MonoBehaviour
 {
     public Vector3 rotateSpeed = new Vector3(0f, 0f ,0f );
+
     // Start is called before the first frame update
     void Start()
     {
-        transform.rotation = Quaternion.identity;
+        //transform.rotation = Quaternion.identity;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(rotateSpeed* Time.deltaTime );
+        transform.Rotate(rotateSpeed* Time.deltaTime, Space.World);
     }
+
+   
 }
