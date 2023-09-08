@@ -9,9 +9,6 @@ public class PlayerController : MonoBehaviour
     private Player playerInput;
     private CharacterController playerController;
     public Transform bulletPoint;
-
-    
-    
     public BulletBehavior bulletBehavior;
 
 

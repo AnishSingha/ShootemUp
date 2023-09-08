@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -17,6 +18,8 @@ public class EnemyMovement : MonoBehaviour , IDamageable
         rb = GetComponent<Rigidbody>();
         currentHealth = e_values.e_health;
         StartCoroutine(EShoot());
+        
+
     }
 
     private void FixedUpdate()
@@ -48,20 +51,26 @@ public class EnemyMovement : MonoBehaviour , IDamageable
 
         
     }
+
+
     public IEnumerator EShoot()
     {
         while (e_values.isShooting == true)
         {
             GameObject bullet = EnemyBulletPool.instance.GetPooledObject();
-
+            GameObject gameObjectInScene = GameObject.Find("Player");
             if (bullet != null)
             {
                 bullet.transform.position = bulletPos.position;
                 bullet.SetActive(true);
                 yield return new WaitForSeconds(e_values.e_Firerate);
             }
+            if (gameObjectInScene==null)
+            {
+                break;
+            }
         }
-
+        
     }
        
 

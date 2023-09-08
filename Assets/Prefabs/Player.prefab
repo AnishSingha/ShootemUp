@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 220854806}
   - component: {fileID: 220854807}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Point Light (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 461428655}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 759304649}
   - component: {fileID: 759304650}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 820158058}
   - component: {fileID: 820158059}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995700757}
   - component: {fileID: 995700758}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1144209264}
   - component: {fileID: 1144209265}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Point Light (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1836521310}
   - component: {fileID: 1836521311}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 663580965185541466}
   - component: {fileID: 663580965185541469}
   - component: {fileID: 691136800}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6570167531663686946}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: bulletPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,6 +774,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bb524ff86196bd646a1bbad119e3f7c0, type: 3}
       propertyPath: m_Name
       value: DeathRow_lowpoly
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bb524ff86196bd646a1bbad119e3f7c0, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: bb524ff86196bd646a1bbad119e3f7c0, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb524ff86196bd646a1bbad119e3f7c0, type: 3}

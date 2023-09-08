@@ -16,7 +16,7 @@ public class EnemyBulletMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("EnemyWall"))
         {
             gameObject.SetActive(false);
         }

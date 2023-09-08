@@ -17,7 +17,7 @@ MonoBehaviour:
   e_yAxis: -1
   e_zAxis: 0
   e_takeDamage: 10
-  isShooting: 0
+  isShooting: 1
   e_health: 100
-  isMoving: 1
+  isMoving: 0
   e_Firerate: 1
