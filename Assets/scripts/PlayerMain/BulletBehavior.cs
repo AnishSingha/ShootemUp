@@ -11,5 +11,6 @@ public class BulletBehavior : ScriptableObject
     public float bulletSpeed;// speed of bullet in BulletMove
 
     public float spawnTimer; // used in PlayerController to give spawn rate timing
+
 }
 

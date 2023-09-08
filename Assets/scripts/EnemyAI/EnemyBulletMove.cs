@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletMove : MonoBehaviour
+public class EnemyBulletMove : MonoBehaviour
 {
-
     public BulletBehavior bulletBehavior;
 
     [SerializeField] private Rigidbody rb;
@@ -12,12 +11,12 @@ public class BulletMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = Vector3.right * bulletBehavior.bulletSpeed * Time.deltaTime;
+        rb.velocity = Vector3.left * bulletBehavior.bulletSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Wall") ||  other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Wall"))
         {
             gameObject.SetActive(false);
         }
