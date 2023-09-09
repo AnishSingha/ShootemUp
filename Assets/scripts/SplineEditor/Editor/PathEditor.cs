@@ -44,7 +44,7 @@ public class PathEditor : Editor
         for (int i = 0; i < path.NumPoints; i++) 
         {
 
-            Vector2 newPos =  Handles.FreeMoveHandle(path[i], Quaternion.identity, .1f, Vector2.zero, Handles.SphereHandleCap);
+            var fmh_47_63_638298752193168703 = Quaternion.identity; Vector2 newPos =  Handles.FreeMoveHandle(path[i], .1f, Vector2.zero, Handles.SphereHandleCap);
             if (path[i]!= newPos)
             {
                 Undo.RecordObject(creator, "Move Point");
