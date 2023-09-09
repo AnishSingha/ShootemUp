@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall
+  - Bullet
+  - Enemy
+  - EBullet
+  - EnemyWall
   layers:
   - Default
   - TransparentFX
@@ -20,12 +25,12 @@ TagManager:
   - FlungTrash
   - WorldBall
   - Checkpoints
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerBounds
+  - Player
+  - Bullets
+  - Enemy
+  - EnemyBullet
+  - EnemyWall
   - 
   - 
   - 
