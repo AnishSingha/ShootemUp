@@ -652,7 +652,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPoint: {fileID: 6570167531663686946}
   bulletBehavior: {fileID: 11400000, guid: d00b8cdbe428d824db4ecb7146ef68f1, type: 2}
-  MoveSpeed: 2
+  joyStick: {fileID: 0}
+  MoveSpeed: 10
   MoveSpeedGyro: 20
   isGyroEnabled: 0
 --- !u!143 &663580965185541469

@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - EBullet
   - EnemyWall
+  - Joystick
   layers:
   - Default
   - TransparentFX

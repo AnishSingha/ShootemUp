@@ -39,7 +39,7 @@ public class SplineMovement : MonoBehaviour
                 // Set the object's position to the evaluated position.
                 transform.position = position;
 
-                // Optionally, rotate the object to align with the tangent.
+                // **Optionally, rotate the object to align with the tangent.
                 //transform.rotation = Quaternion.LookRotation(tangent, Vector3.up);
             }
         }
