@@ -5,8 +5,6 @@ using UnityEngine.Pool;
 
 public class BulletPool : MonoBehaviour
 {
-
-
     public static BulletPool instance;
     private List<GameObject> pooledObjects = new List<GameObject>();
     public int amountToPool = 20;

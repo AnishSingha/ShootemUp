@@ -5,11 +5,14 @@ using UnityEngine.Splines;
 
 public class SplineMovement : MonoBehaviour
 {
+    
     public SplineContainer splineContainer; // Reference to the SplineContainer that holds the path.
     public float speed = 2.0f; // The speed at which the object moves along the path.
     public bool loop = true; // Whether to loop the path.
 
-    private float t = 0.0f; // The parameter t that determines the position along the path.
+    [Range(0,1)]
+    [SerializeField] float t = 0.0f; // The parameter t that determines the position along the path.
+
 
     private void Update()
     {

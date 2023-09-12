@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class EnemyBulletPool : MonoBehaviour
 {
+    [Header("test")]
     public static EnemyBulletPool instance;
+
     private List<GameObject> pooledObjects = new List<GameObject>();
     public int amountToPool = 20;
     public BulletBehavior bulletBehavior;

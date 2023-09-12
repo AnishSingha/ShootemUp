@@ -8,7 +8,7 @@ public class BulletBehavior : ScriptableObject
 {
     public GameObject bulletPrefab; // used in BulletPool to give the appropriate gameobject to instantiate
 
-    public float bulletSpeed;// speed of bullet in BulletMove
+    public float bulletSpeed;// speed of bullet in BulletMove                                                                           
 
     public float spawnTimer; // used in PlayerController to give spawn rate timing
 

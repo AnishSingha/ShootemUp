@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.Pool;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using UnityEngine.InputSystem.OnScreen;
 
 public class PlayerController : MonoBehaviour 
 {
@@ -12,6 +14,12 @@ public class PlayerController : MonoBehaviour
     public BulletBehavior bulletBehavior;
     public Camera mainCamera;
     public GameObject joyStick;
+    [SerializeField] Image image1;
+    [SerializeField] Image image2;
+    [SerializeField] GameObject stick;
+
+    float screenWidth;
+    float screenHeight;
 
     private void Awake()
     {
@@ -39,7 +47,9 @@ public class PlayerController : MonoBehaviour
 
         Input.gyro.enabled = true;
         InvokeRepeating("Fire", 0.1f, bulletBehavior.spawnTimer);
-        
+        screenWidth = Screen.width;
+        //Debug.Log(screenWidth);
+        screenHeight = Screen.height;
     }
 
     #region GyroImplementation
@@ -71,34 +81,68 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        
+        Vector2 moveInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
+        Vector2 move = new(moveInput.x, moveInput.y);
+        playerController.Move(MoveSpeed * Time.deltaTime * move);
 
         if (isGyroEnabled == true)
         {
             GyroMove();
         }
 
+
+
+        int touchcount = Input.touchCount;
+       // Debug.Log(touchcount);
+
+
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
+
+            Debug.Log(touch.phase);
+            Vector3 touchPosition = touch.position;
+            
+
             if (touch.phase == TouchPhase.Began)
             {
-                // Enable the object when you touch the screen.
-                joyStick.SetActive(true);
-                Vector3 touchPosition = touch.position;
+              
                 
-                touchPosition = mainCamera.ScreenToWorldPoint(touchPosition);
-                joyStick.transform.localPosition = new Vector3(touchPosition.x, touchPosition.y , touchPosition.z);
+                image1.color = new Vector4(256f, 256f, 256f, 1f);
+                image2.color = new Vector4(256f, 256f, 256f, 1f);
 
-                //movement Logic
-                Vector2 moveInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
-                Vector2 move = new(moveInput.x, moveInput.y);
-                playerController.Move(MoveSpeed * Time.deltaTime * move);
+                joyStick.transform.localPosition = new Vector3(touchPosition.x - (screenWidth / 2), touchPosition.y - (screenHeight / 2), touchPosition.z);
+
+                stick.transform.localPosition = new Vector3(touchPosition.x - (screenWidth / 2), touchPosition.y - (screenHeight / 2), touchPosition.z);
+                // Enable the object when you touch the screen.
+                //joyStick.SetActive(true);
+
+
+
+                //Debug.Log(touchPosition);
+
+                // touchPosition = mainCamera.ScreenToWorldPoint(touchPosition); 
+
+
+
+
+
             }
+            /*          if (touch.phase == TouchPhase.Moved)
+                      {
+                          var delta = stick.transform.position - touchPosition;
+                          delta = Vector2.ClampMagnitude(delta, 10f);
+                          Debug.Log(delta);
+                          var newPos = new Vector3(delta.x / 10f, delta.y / 10f);
+
+                          stick.transform.localPosition = new Vector3(newPos.x - (screenWidth / 2), newPos.y - (screenHeight / 2), newPos.z);
+                      }*/
         }
         else
         {
-            joyStick.SetActive(false);
+            //joyStick.SetActive(false);
+            image1.color = new Vector4(0,0,0,0);
+            image2.color = new Vector4(0,0,0,0);
         }
 
        /* if (Input.GetMouseButton(0))

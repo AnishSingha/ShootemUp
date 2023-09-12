@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: -3697547956854726225}
   - component: {fileID: 4694215150398923726}
   - component: {fileID: -603443688195688115}
-  - component: {fileID: 6535979894446568032}
+  - component: {fileID: 3068559745970208818}
   m_Layer: 19
-  m_Name: EBullet
+  m_Name: EBullet 1
   m_TagString: EBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6535979894446568032
+--- !u!114 &3068559745970208818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,8 +144,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4149568093153539665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f31a1211792ea4bbcdbbd0d8a7241b, type: 3}
+  m_Script: {fileID: 11500000, guid: 477deee1308e3dd44b6dc9c9fe9863e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletBehavior: {fileID: 11400000, guid: d00b8cdbe428d824db4ecb7146ef68f1, type: 2}
+  turretPoint: {x: 1, y: 90, z: 0}
   rb: {fileID: 4694215150398923726}
