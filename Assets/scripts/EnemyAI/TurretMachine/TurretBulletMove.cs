@@ -11,11 +11,12 @@ public class TurretBulletMove : MonoBehaviour
     [SerializeField] private Rigidbody rb;
 
 
+
     private void FixedUpdate()
     {
         
 
-        transform.Translate( Vector3.up * 10f *Time.deltaTime, Space.Self);
+        transform.Translate( Vector3.up * bulletBehavior.bulletSpeed *Time.deltaTime, Space.Self);
     }
 
     private void OnTriggerEnter(Collider other)

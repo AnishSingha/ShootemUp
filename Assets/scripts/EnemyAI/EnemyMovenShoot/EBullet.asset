@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739e31a5fc186da4b991de1c248acc0b, type: 3}
   m_Name: EBullet
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4149568093153539665, guid: aff2d6fa069a8bf4b9b29a408249a260, type: 3}
+  bulletPrefab: {fileID: 4149568093153539665, guid: 2dd20ff2b35618749b06cfa9ea8e5f10, type: 3}
   bulletSpeed: 300
-  spawnTimer: 1.5
+  spawnTimer: 0.08
