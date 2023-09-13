@@ -18,13 +18,13 @@ public class TurretShoot : MonoBehaviour
     {
         while (isShooting == true)
         {
-            GameObject bullet = EnemyBulletPool.instance.GetPooledObject();
+            GameObject bullet = TurretBulletPool.instance.GetPooledObject();
             //GameObject gameObjectInScene = GameObject.Find("Player");
             if (bullet != null)
             {
-                bullet.transform.position = transform.position;
+                bullet.transform.position = transform.position; 
                 bullet.transform.localRotation = transform.rotation;
-
+                yield return new WaitForSeconds(0.01f);
                 bullet.SetActive(true);
 
             }

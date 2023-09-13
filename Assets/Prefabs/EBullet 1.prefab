@@ -147,6 +147,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 477deee1308e3dd44b6dc9c9fe9863e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletBehavior: {fileID: 11400000, guid: d00b8cdbe428d824db4ecb7146ef68f1, type: 2}
-  turretPoint: {x: 1, y: 90, z: 0}
+  bulletBehavior: {fileID: 11400000, guid: 9dad617b1ebaffb4e88ebd50ecd802c8, type: 2}
   rb: {fileID: 4694215150398923726}
