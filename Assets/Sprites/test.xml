@@ -1,0 +1,36 @@
+<TextureAtlas imagePath="sheet.png">
+	<SubTexture name="MainPanel01.png" x="0" y="0" width="852" height="527" />
+	<SubTexture name="Grid.png" x="0" y="529" width="454" height="337" />
+	<SubTexture name="MainPanel02.png" x="456" y="529" width="302" height="403" />
+	<SubTexture name="SelectPanel01.png" x="760" y="529" width="157" height="339" />
+	<SubTexture name="SelectPanel02.png" x="854" y="0" width="157" height="339" />
+	<SubTexture name="SelectPanel03.png" x="919" y="341" width="157" height="339" />
+	<SubTexture name="MainPanel03 - Copy.png" x="760" y="870" width="302" height="143" />
+	<SubTexture name="MainPanel03.png" x="0" y="868" width="302" height="143" />
+	<SubTexture name="Button07.png" x="304" y="868" width="134" height="119" />
+	<SubTexture name="Button08.png" x="919" y="682" width="134" height="119" />
+	<SubTexture name="TitlePanel01.png" x="440" y="934" width="318" height="20" />
+	<SubTexture name="Button01.png" x="919" y="803" width="152" height="40" />
+	<SubTexture name="Slider01.png" x="919" y="845" width="245" height="18" />
+	<SubTexture name="TitlePanel02.png" x="304" y="989" width="183" height="20" />
+	<SubTexture name="Button15.png" x="440" y="956" width="165" height="21" />
+	<SubTexture name="Button16.png" x="489" y="979" width="165" height="21" />
+	<SubTexture name="Button09.png" x="656" y="956" width="71" height="46" />
+	<SubTexture name="Button10.png" x="1055" y="682" width="71" height="46" />
+	<SubTexture name="Button02.png" x="854" y="341" width="56" height="58" />
+	<SubTexture name="Button03.png" x="854" y="401" width="56" height="58" />
+	<SubTexture name="Button04.png" x="854" y="461" width="56" height="58" />
+	<SubTexture name="Button05.png" x="1055" y="730" width="56" height="58" />
+	<SubTexture name="Button06.png" x="1113" y="730" width="56" height="58" />
+	<SubTexture name="Button11.png" x="1073" y="790" width="105" height="21" />
+	<SubTexture name="Button12.png" x="1073" y="813" width="105" height="21" />
+	<SubTexture name="Button13.png" x="1064" y="865" width="105" height="21" />
+	<SubTexture name="Button14.png" x="1166" y="836" width="105" height="21" />
+	<SubTexture name="Switch01.png" x="1064" y="888" width="66" height="24" />
+	<SubTexture name="Switch02.png" x="1064" y="914" width="66" height="24" />
+	<SubTexture name="Switch03.png" x="1064" y="940" width="66" height="24" />
+	<SubTexture name="Switch04.png" x="1064" y="966" width="66" height="24" />
+	<SubTexture name="Switch05.png" x="1064" y="992" width="66" height="24" />
+	<SubTexture name="Switch06.png" x="1132" y="888" width="66" height="24" />
+	<SubTexture name="Slider02.png" x="489" y="1004" width="22" height="17" />
+</TextureAtlas>
