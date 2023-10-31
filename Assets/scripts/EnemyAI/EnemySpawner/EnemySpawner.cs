@@ -11,7 +11,10 @@ public class EnemySpawner : MonoBehaviour
         "to the prefab of spline(It is mandatary to do so)")]
 
     [Space]
-    public WaveInstance waveInstance1;
+    [SerializeField] WaveInstance waveInstance1;
+
+
+
 
     IEnumerator SpawnWave()
     {
@@ -25,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
         Debug.Log("RoundCompleted");
-            
+    
     }
 
     void SpawnEnemy(GameObject enemyPrefab)

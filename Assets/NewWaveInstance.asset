@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bd627653e314cf428e18e9cd5cedd6b, type: 3}
-  m_Name: WaveInstance1
+  m_Name: NewWaveInstance
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1336475581105628340, guid: d2d3b271196de4f488300a29b4b28a27, type: 3}
-  count: 3
-  timeBetweenSpawns: 3
-  timeToSpawn: 3
+  count: 0
+  timeBetweenSpawns: 0
+  timeToSpawn: 0
